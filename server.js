@@ -26,8 +26,9 @@ app.get("/", (req, res) => {
 
   tokens.add(t);
   fs.appendFileSync(LOG_FILE, t + "\n");
-
-  res.send(`Yeni token loglandı: ${t}`);
+  
+  console.log(t);
+  res.send("");
 });
 
 app.listen(PORT, () => {
